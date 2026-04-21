@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h1 {
+    color: gold;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('https://i.pinimg.com/1200x/fc/42/b6/fc42b6076683a933c4ebd6caf709bc09.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+.hero h2 {
+    font-size:  3rem;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    margin-top: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #ccc;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.section {
+    padding: 60px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: gold;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.section.show h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.6;
+}
+
+.card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(0); 
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.vision {
+    text-align: center;
+    background: #111;
+    padding: 50px;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.vision.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
